@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #dadada;
+  --blue: #283cfa;
+  --orange: #ff7900;
+  --light-green: #55dcaa;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+  background: var(--background);
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+}
