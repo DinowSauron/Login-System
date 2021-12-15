@@ -34,7 +34,11 @@
   border-radius: .5rem;
   border: 2px solid var(--light-green)
 }
-
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
 .loginContainer button {
   background: var(--orange);
   color: #fff;
@@ -48,22 +52,8 @@
   border: 0;
   border-radius: .5rem;
 }
-form {
-  position: relative;
-}
-img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: inline;
-  border-radius: 50rem;
-  width: 3rem;
-  height: 3rem;
-  object-fit: cover;
-}
 a {
   display: block;
-  position: absolute;
   color: var(--blue);
   background: var(--light-green);
   border-radius: .3rem;
@@ -71,8 +61,21 @@ a {
   text-decoration: none;
   padding: 0.4rem;
   margin-top: 1rem;
-  right: 1.2rem;
-  top: 0;
+  width: fit-content;
 
   z-index: 10;
+}
+
+form {
+  position: relative;
+}
+img {
+  position: absolute;
+  top: .5rem;
+  right: 0;
+  display: inline;
+  border-radius: 50rem;
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
 }

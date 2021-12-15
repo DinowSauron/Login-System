@@ -17,6 +17,11 @@ body {
   color: #fff;
 }
 
-button {
+button, a {
   cursor: pointer;
+  transition: filter .25s;
+}
+
+button:hover, a:hover{
+  filter: brightness(.8);
 }

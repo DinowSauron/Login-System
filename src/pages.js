@@ -7,7 +7,13 @@ module.exports = {
   // GET
 
   index(req, res) {
+    const authToken = getAuthCookie(req);
+    if(authToken && isValidToken(authToken)){
+      return res.redirect("/user")
+    }
+
     return res.sendFile(PathJoin("index.html"))
+
   },
 
   user(req, res) {

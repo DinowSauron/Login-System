@@ -14,7 +14,7 @@ if(location.pathname === "/createaccount") {
 
 function validatePassword(){
   if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Senhas não  ");
+    confirm_password.setCustomValidity("Senhas não Conhecidem");
   } else {
     confirm_password.setCustomValidity('');
   }
