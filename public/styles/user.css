@@ -1,0 +1,90 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginContainer {
+  position: relative;
+  width: 30rem;
+  height: fit-content;
+  padding: 2rem;
+  padding-right: 1rem;
+  border-radius: 2rem;
+   
+  background: var(--blue);
+  display: flex;
+  flex-direction: row;
+}
+.loginContainer main h1 {
+  color: var(--light-green);
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+
+.loginContainer main input::placeholder { 
+  color: #d6d6d6;
+}
+.loginContainer main input {
+  background: transparent;
+  width: 25ch;
+  padding: 0.5rem; 
+  margin: 1rem 0 0;
+
+  color: #fff;
+  border-radius: .5rem;
+  border: 2px solid var(--light-green)
+}
+
+.loginContainer main p {
+  margin-bottom: 0.5rem;
+}
+.loginContainer main h2 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  
+}
+.loginContainer main label button {
+  background: var(--orange);
+  color: #fff;
+  padding: 0.5rem; 
+  margin-left: 1rem;
+  width: 8ch;
+  height: 2.5rem;
+  border: 0;
+  border-radius: .5rem;
+}
+.loginContainer main label > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.loginContainer main label {
+  display: block;
+  margin-left: .8rem;
+}
+.loginContainer main label input {
+  display: block;
+  margin: 0;
+}
+.loginContainer main > button {
+  background: var(--orange);
+  color: #fff;
+  margin: 1rem 0 0;
+  padding: 0.5rem; 
+  width: 25ch;
+  
+  font-weight: bold;
+  border: 0;
+  border-radius: .5rem;
+}
+
+
+.loginContainer main {
+  margin-left: .5rem;
+  width: calc(100% - 4rem);
+}

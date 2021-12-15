@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,37 +10,64 @@
   <title>Login</title>
 
   <link rel="stylesheet" type="text/css" href="/styles/global.css">
-  <link rel="stylesheet" type="text/css" href="/styles/index.css">
+  <link rel="stylesheet" type="text/css" href="/styles/create.css">
 </head>
 <body>
   <div class="container">
     <div class="loginContainer">
-      <h1>Login.</h1>
+      <h1>Crie sua conta!</h1>
 
-      <form action="/loginUser" method="POST">
+      <form action="/createNewUser" method="POST">
+        
         <input 
           type="text" 
           name="name" 
           id="name"
           placeholder="Username"
+          min="3"
+          max="20"
           required
+        > *
+        <input 
+          type="url" 
+          name="picture" 
+          id="picture"
+          placeholder="URL da sua foto"
+          onchange="setImageByInput()"
+          on
+        > <img src="" id="img" alt="">
+        <input 
+          type="text" 
+          name="state" 
+          id="state"
+          placeholder="Estado"
         >
+        <input 
+          type="email" 
+          name="email" 
+          id="email"
+          placeholder="E-mail"
+        > * 
         <input 
           type="password" 
           name="password" 
           id="password"
           placeholder="Senha"
           required
-        >
+        > *
+        <input 
+          type="password" 
+          name="confirm_password" 
+          id="confirm_password"
+          placeholder="Confirme sua senha"
+          required
+        > *
 
-        <button type="submit" onclick="handleSaveUsername()">Entrar</button>
-        <a href="/createaccount">
-          Criar conta
-        </a>
+        <button type="submit" id="submitButton">Criar Conta!</button>
+        
       </form>
     </div>
   </div>
-
   <script src="scripts/userInteractions.js"></script>
 </body>
 </html>

@@ -16,25 +16,10 @@
    
   background: var(--blue);
 }
-.loginContainer h1 {
-  color: var(--light-green);
-}
-
 
 .loginContainer input::placeholder { 
   color: #d6d6d6;
 }
-.loginContainer input {
-  background: transparent;
-  width: 25ch;
-  padding: 0.5rem; 
-  margin: 1rem 0 0;
-
-  color: #fff;
-  border-radius: .5rem;
-  border: 2px solid var(--light-green)
-}
-
 .loginContainer button {
   background: var(--orange);
   color: #fff;
@@ -47,6 +32,37 @@
   font-weight: bold;
   border: 0;
   border-radius: .5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  position: relative;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 1rem;
+}
+li div {
+  padding-left: 1rem;
+  max-width: calc(100% - 3rem);
+}
+li img {
+  display: inline;
+  object-fit: cover;
+  border-radius: 20rem;
+  border: 1px solid var(--orange);
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+}
+li p {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 a {

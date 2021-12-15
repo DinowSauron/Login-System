@@ -1,0 +1,26 @@
+
+aside {
+  width: 4rem;
+  border-right: 2px solid var(--orange);
+
+  display: flex;
+  flex-direction: column;
+}
+
+aside img {
+  border-radius: 100%;
+  width: 2.8rem;
+  height: 2.8rem;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+aside a,
+aside button{
+  font-size: .8rem;
+  color: var(--light-green);
+  margin-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--orange);
+  text-align: center;
+}
