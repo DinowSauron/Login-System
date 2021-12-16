@@ -26,7 +26,6 @@ module.exports = {
       if(dbUser.username === user.name) {
         if(dbUser.password === user.password) {
           getLoginToken(dbUser);
-          writeDataInDatabase(db);
           return true;
         }else {
           returnState = {
@@ -85,7 +84,7 @@ module.exports = {
     return allUsers;
   },
 
-  changeName(newName, token) {
+  updateName(newName, token) {
     if(isValidToken(token)) {
       const db = require("../database.json");
       const username = jwt.verify(token, secretKey).name.trim();
@@ -176,7 +175,7 @@ function isValidToken(token) {
     }
     return true
   } catch(err) {
-    console.log("a")
+    console.log("token not valid")
     return false;
   }
 
@@ -194,7 +193,6 @@ function getLoginToken(user) {
   const expires = process.env.TOKEN_EXPIRES;
   const token = jwt.sign(userInfo, secretKey, {expiresIn: Number(expires)});
 
-  user.tokenInfo.token = token
 
   returnState = {
     redirect: "/user",

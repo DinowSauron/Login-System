@@ -1,6 +1,6 @@
 
 const path = require('path');
-const { executeLogin, isValidToken, getUserData, getAllUsersData, changeName, createNewUser } = require("./services/AccessManager")
+const { executeLogin, isValidToken, getUserData, getAllUsersData, updateName, createNewUser } = require("./services/AccessManager")
 
 module.exports = {
 
@@ -18,6 +18,7 @@ module.exports = {
 
   user(req, res) {
     const authToken = getAuthCookie(req);
+
     if(!authToken || !isValidToken(authToken)){
       res.redirect("/");
       return
@@ -78,7 +79,7 @@ module.exports = {
     const data = createNewUser(userData)
 
     if(data.error) {
-      res.redirect("/createUser")
+      res.redirect("/createaccount")
     }
     if(data.redirect) {
       res.redirect(data.redirect)
@@ -99,7 +100,7 @@ module.exports = {
       return
     }
 
-    const status = changeName(newName, authToken);
+    const status = updateName(newName, authToken);
 
     if(status.error) {
       console.log(status);
@@ -150,6 +151,9 @@ function PathJoin(pathName){
 }
 
 function getAuthCookie(req) {
+  if(!req.headers.cookie){
+    return false;
+  }
   const rawCookiesList = req.headers.cookie.split(";");
   const authCookie = rawCookiesList.map(cookie => {
     if(cookie.trim().indexOf("ls-auth-token") === 0) {

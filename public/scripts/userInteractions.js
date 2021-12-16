@@ -21,7 +21,6 @@ function validatePassword(){
 }
 
 function handleLogout() {
-
   console.log("inicialize")
   document.cookie = "ls-auth-token= "
   location.reload()

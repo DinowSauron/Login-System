@@ -53,6 +53,9 @@ async function setUserDataInHTML() {
       element.value =user[valueName];
     })
   }
+
+
+  
   async function getUserInfo() {
     return await fetch("/getUserInformation",{
       method: "GET",
