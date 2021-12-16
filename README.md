@@ -44,4 +44,4 @@ além disto também apos o login você terá acesso a página da listagem dos us
   TOKEN_EXPIRES=500 # in seconds
   ```
 * ``yarn dev`` - executa o projeto localmente
-* Caso queira um banco de dados sem usuários, coloque apenas ``{users:[]}`` no arquivo do banco de dados para ele ser iniciado vazio!
+* Caso queira um banco de dados sem usuários, coloque apenas ``{"users":[]}`` no arquivo do banco de dados para ele ser iniciado vazio!
